@@ -12,13 +12,11 @@
 def pedir_entero():
     while True:
         try:
-            edad = input("Ingrese la edad por teclado: ")
-            escape_edad = int(edad)
-            if escape_edad < 0 or escape_edad > 120:
-                raise ValueError("La edad es mayor a 120 o negativa")
-            print(f"La edad es {escape_edad}")
-            break
-        except ValueError as e:
-            print(e)
+            edad = int(input("Ingrese su edad: "))
+            print(f"Edad registrada: {edad}")
+            return edad
+        except ValueError:
+            print("Debe ingresar un número válido.")
 
-pedir_entero()
+if __name__ == "__main__":
+    pedir_entero()

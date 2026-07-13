@@ -16,17 +16,14 @@
 # El objetivo es recorrer la lista ordenada alfabéticamente tomando como referencia la clave `"nombre"` de cada diccionario.
 
 
-def main():    
-    alumnos = [   
-            {"nombre": "Zack", "casa": "Slytherin"},
-            {"nombre": "Ana", "casa": "Gryffindor"}
+def main():
+    alumnos = [
+        {"nombre": "Zack", "casa": "Slytherin"},
+        {"nombre": "Ana", "casa": "Gryffindor"}
     ]
-    
-    # alumnos_sorted = []
-    
-    sorteado = sorted(alumnos["nombre"])
-    print(sorteado)
-    
+
+    for alumno in sorted(alumnos, key=lambda a: a["nombre"]):
+        print(alumno["nombre"])
 
 if __name__ == "__main__":
     main()

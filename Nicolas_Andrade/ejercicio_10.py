@@ -31,7 +31,5 @@
 
 # ---
 
-def calcular_cuadrado(numero = 1):
-    print(numero * numero)
-
-calcular_cuadrado()
+def calcular_cuadrado(n):
+    return n * n

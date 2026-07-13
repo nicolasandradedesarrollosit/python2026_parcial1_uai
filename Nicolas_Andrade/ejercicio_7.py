@@ -23,18 +23,10 @@
 
 import sys
 
-def validate_args(q):
-    if q >= 2:
-        return True
-    else:
-        return False
-
 def main():
-    q_args = len(sys.argv)
-    validate_q = validate_args(q_args)
-    if validate_q:
-        print("La cantidad de argumentos es valida!")
-    else:
-        print("La cantidad de argumentos es invalida.")
+    if len(sys.argv) != 2:
+        sys.exit("Error: debe ingresar exactamente un argumento.")
+    print(f"Argumento recibido: {sys.argv[1]}")
+
 if __name__ == "__main__":
     main()

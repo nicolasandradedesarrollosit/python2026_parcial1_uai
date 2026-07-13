@@ -32,13 +32,10 @@ class Libro:
     def __init__(self, titulo, autor):
         self.titulo = titulo
         self.autor = autor
-    
-    def __str__(self):
-        return f"El {self.titulo} por {self.autor}"
-    
 
-def libro_author():
-    object_libro = Libro("Aleph", "Jorge Luis Borges")
-    print(object_libro)
-    
-libro_author()
+    def __str__(self):
+        return f"{self.titulo} por {self.autor}"
+
+if __name__ == "__main__":
+    libro = Libro("El Aleph", "Jorge Luis Borges")
+    print(libro)

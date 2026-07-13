@@ -12,12 +12,8 @@
 
 def main():
     palabras = ["hola", "mundo", "python"]
-    new_list = []
-    for i in range (len(palabras)):
-        new_list.append(palabras[i].upper())
-    
-    print(new_list)
-
+    mayusculas = [palabra.upper() for palabra in palabras]
+    print(mayusculas)
 
 if __name__ == "__main__":
     main()

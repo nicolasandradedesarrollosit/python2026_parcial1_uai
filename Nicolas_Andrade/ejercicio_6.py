@@ -26,22 +26,14 @@
 
 # ---
 
-# olvide estudiar expresiones regulares :( lo hago normal
-
-def validate_correo(correo):
-    spliteado = correo.split("@")
-    if len(spliteado) != 2:
-        return False
-    if spliteado[1] != "uai.edu.ar":
-        return False
-    return True
+import re
 
 def main():
     correo = input("Ingresa un correo electronico: ")
-    validacion = validate_correo(correo)
-    if validacion:
+    if re.search(r"@uai\.edu\.ar$", correo):
         print("El correo es valido")
     else:
         print("El correo es invalido")
+
 if __name__ == "__main__":
     main()

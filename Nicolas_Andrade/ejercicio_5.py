@@ -13,19 +13,11 @@
 
 import csv
 
-import sys
-
 def main():
-    q_args = len(sys.argv)
-    if q_args > 2:
-        ValueError("Too many arguments...")
-    if q_args < 2:
-        ValueError("Too few arguments...")
-    file = sys.argv[1]
-    
-    with open(file, "r", encoding="UTF-8"):
-        for filas in file:
-            print(filas["nombre"])
+    with open("estudiantes.csv", "r", encoding="UTF-8") as archivo:
+        lector = csv.DictReader(archivo)
+        for fila in lector:
+            print(fila["nombre"])
 
 if __name__ == "__main__":
     main()
